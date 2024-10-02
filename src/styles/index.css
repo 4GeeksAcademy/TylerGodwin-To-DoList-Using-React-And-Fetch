@@ -1,12 +1,45 @@
+body {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,240,255,1) 0%, rgba(180,220,235,1) 25%, rgba(160,200,215,1) 50%, rgba(140,180,195,1) 75%, rgba(120,160,175,1) 100%);
+}
 
-/* 
+h1 {
+    font-size: 36pt;
+    text-align: center;
+    margin-top: 50px;
+    color: grey;
+    text-shadow: 1px 1px 2px black, 0 0 1em grey, 0 0 0.2em lightgrey;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.to-dolist {
+    margin: auto;
+    margin-top: 25px;
+    width: 600px;
+    padding: 0;
+    list-style: none;
+    background: linear-gradient(lightgrey, white, lightgrey, white);
+    font-size: 16pt;
+}
 
-*/
+ul li {
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    list-style: none;
+    background: linear-gradient(lightgrey, white, lightgrey, white);
+}
+
+i {
+    float: right;
+    margin-top: 4px;
+}
+
+.task-count {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+}
