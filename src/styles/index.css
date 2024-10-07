@@ -10,7 +10,7 @@ h1 {
     text-shadow: 1px 1px 2px black, 0 0 1em grey, 0 0 0.2em lightgrey;
 }
 
-.to-dolist {
+.todoList {
     margin: auto;
     margin-top: 25px;
     width: 600px;
@@ -38,7 +38,7 @@ i {
     margin-top: 4px;
 }
 
-.task-count {
+.taskCount {
     text-align: center;
     font-weight: bold;
     font-size: 14pt;
