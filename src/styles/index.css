@@ -4,42 +4,52 @@ body {
 
 h1 {
     font-size: 36pt;
-    text-align: center;
-    margin-top: 50px;
+    margin: 50px 0px 25px 0px;
     color: grey;
     text-shadow: 1px 1px 2px black, 0 0 1em grey, 0 0 0.2em lightgrey;
 }
 
-.todoList {
+ul li {
+    height: 50px;
+    width: 730px;
+    border: 1px solid grey;
+    padding: 5px 0px 0px 10px;
     margin: auto;
-    margin-top: 25px;
-    width: 600px;
-    padding: 0;
-    list-style: none;
-    background: linear-gradient(lightgrey, white, lightgrey, white);
-    font-size: 16pt;
 }
 
-ul li {
-    border: 1px solid grey;
-    padding: 5px;
+ul {
+    text-align: start;
+    font-weight: bold;
+    list-style: none;
+    height: 50px;
+    width: 730px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0px;
 }
 
 input {
-    height: 100%;
-    width: 100%;
-    border: none;
+    height: 38px;
+    width: 600px;
+    margin-right: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+    border: solid grey 1px;
     list-style: none;
     background: linear-gradient(lightgrey, white, lightgrey, white);
 }
 
-i {
-    float: right;
-    margin-top: 4px;
+.btn-success {
+    width: 120px;
+    margin-bottom: 3px;
 }
 
-.taskCount {
-    text-align: center;
-    font-weight: bold;
-    font-size: 14pt;
+.btn-danger {
+    float: right;
+    margin-right: 5px;
+}
+
+.postTodo {
+    margin: auto;
+    width: 730px;
 }
