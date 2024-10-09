@@ -97,7 +97,7 @@ const ToDoList = () => {
 			</h1>
 			<div className="postTodo">
 				<input className="typeTodo" type="text" value={newTodo} onChange={handleChange} />
-				<button type="button" class="btn btn-success" onClick={addNewTask}  >
+				<button type="button" className="btn btn-success" onClick={addNewTask}  >
 					Add a to-do
 				</button>
 			</div>
@@ -106,7 +106,7 @@ const ToDoList = () => {
 				{list.map((item, index) => {
 					return (
 						<li key={index}>
-							{item.label}<button type="button" class="btn btn-danger" onClick={() => deleteUser(item.id)}> Delete </button>
+							{item.label}<button type="button" className="btn btn-danger" onClick={() => deleteUser(item.id)}> Delete </button>
 
 						</li>
             
