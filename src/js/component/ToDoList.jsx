@@ -4,6 +4,10 @@ const ToDoList = () => {
 
 	const [newTodo, setNewTodo] = useState("");
 	const [list, setList] = useState([])
+	const clearInputField = () => {
+		let input1 = document.getElementById('typeTodo');
+		input1.value = "";
+	}
 
 
 
@@ -45,7 +49,7 @@ const ToDoList = () => {
 		} catch (error) { }
 	}
 
-	const deleteUser = async (id) => {
+	const deleteTodo = async (id) => {
 
 		try {
 			const response = await fetch(`https://playground.4geeks.com/todo/todos/${id}`, {
@@ -63,7 +67,7 @@ const ToDoList = () => {
 	}
 
 	
-	const addNewTask = () => {
+	const addNewTodo = () => {
 		fetch('https://playground.4geeks.com/todo/todos/Tgodwin94', {
 			method: "POST",
 			body: JSON.stringify({
@@ -89,15 +93,14 @@ const ToDoList = () => {
 		getList()
 	}, [])
 
-
 	return (
 		<div className="text-center">
 			<h1 className="text-center mt-5">
 				To-Do List
 			</h1>
 			<div className="postTodo">
-				<input className="typeTodo" type="text" value={newTodo} onChange={handleChange} />
-				<button type="button" className="btn btn-success" onClick={addNewTask}  >
+				<input id="typeTodo" type="text" value={newTodo} onChange={handleChange} />
+				<button type="button" className="btn btn-success" onClick={() => { addNewTodo(); clearInputField();}}>
 					Add a to-do
 				</button>
 			</div>
@@ -106,7 +109,7 @@ const ToDoList = () => {
 				{list.map((item, index) => {
 					return (
 						<li key={index}>
-							{item.label}<button type="button" className="btn btn-danger" onClick={() => deleteUser(item.id)}> Delete </button>
+							{item.label}<button type="button" className="btn btn-danger" onClick={() => deleteTodo(item.id)}> Delete </button>
 
 						</li>
             
